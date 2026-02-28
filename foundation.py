@@ -65,3 +65,8 @@ exchange = SecureDataExchange()
 token_part = exchange.encode_base64url_safe(auth_header)
 print(f"Generated Token Header: {token_part}\n")
 
+# Example 2: Injection Prevention (Updated with ASCII, Hex, URL, Base64)
+malicious_input = "<script>alert('XSS')</script>"
+secure_handler = SecureDataExchange()
+secure_handler.analyze_encoding_security(malicious_input)
+
