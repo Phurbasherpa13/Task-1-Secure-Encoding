@@ -70,3 +70,8 @@ malicious_input = "<script>alert('XSS')</script>"
 secure_handler = SecureDataExchange()
 secure_handler.analyze_encoding_security(malicious_input)
 
+# Example 3: Efficiency Optimization
+print("--- Example 3: Efficiency (Compression + Encoding) ---")
+long_text = "Repetitive data string used to demonstrate GZIP compression efficiency. " * 50
+optimized_exchange = SecureDataExchange(long_text)
+optimized_exchange.compress_and_encode()
