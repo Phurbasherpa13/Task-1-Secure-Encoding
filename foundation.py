@@ -60,3 +60,8 @@ class SecureDataExchange:
 
 # Example 1: Secure Token Transmission (OAuth style)
 print("--- Example 1: Secure Token (Base64URL) ---")
+auth_header = {"alg": "HS256", "typ": "JWT", "user": "admin", "exp": 1715620000}
+exchange = SecureDataExchange()
+token_part = exchange.encode_base64url_safe(auth_header)
+print(f"Generated Token Header: {token_part}\n")
+
