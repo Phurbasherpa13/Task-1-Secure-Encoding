@@ -4,4 +4,7 @@ import zlib
 import json
 
 class SecureDataExchange:
-    pass
+    def __init__(self, data=None):
+        self.raw_data = data
+
+    pass 
