@@ -23,4 +23,36 @@ class SecureDataExchange:
         print(f"Final Size: {len(encoded)} bytes")
         return encoded
 
-    
+    def analyze_encoding_security(self, user_input):
+        """
+        Example 2: Injection Prevention Analysis
+        Visualizes how a malicious payload looks in different formats:
+        1. Raw ASCII (The threat)
+        2. Hex (The underlying bytes)
+        3. URL Encoded (The safe transport)
+        4. Base64 (Another transport format)
+        """
+        print("\n--- Example 2: Injection Prevention Analysis ---")
+        
+        # 1. Raw Input
+        print(f"1. Raw ASCII String: {user_input}")
+
+        # 2. Hex Representation
+        # We convert the string to bytes and then to Hexadecimal.
+        # This reveals the 'dangerous' byte values like 0x3C (<) and 0x3E (>).
+        hex_bytes = user_input.encode('utf-8').hex()
+        # Format with spaces for readability (e.g., "3c 73 63...")
+        formatted_hex = ' '.join([hex_bytes[i:i+2] for i in range(0, len(hex_bytes), 2)])
+        print(f"2. Hex Representation:  {formatted_hex}")
+
+        # 3. URL Encoding
+        # Replaces unsafe characters with % followed by two hex digits.
+        url_encoded = urllib.parse.quote(user_input, safe='')
+        print(f"3. URL Encoded:        {url_encoded}")
+
+        # 4. Base64 Encoding
+        # Maps binary to ASCII characters. Note that '<' becomes 'PH' in Base64.
+        b64_encoded = base64.b64encode(user_input.encode('utf-8')).decode('utf-8')
+        print(f"4. Base64 Encoded:     {b64_encoded}")
+        print("-" * 60)
+
