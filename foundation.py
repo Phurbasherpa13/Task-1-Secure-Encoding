@@ -56,3 +56,7 @@ class SecureDataExchange:
         print(f"4. Base64 Encoded:     {b64_encoded}")
         print("-" * 60)
 
+# --- Real World Example Scenarios ---
+
+# Example 1: Secure Token Transmission (OAuth style)
+print("--- Example 1: Secure Token (Base64URL) ---")
