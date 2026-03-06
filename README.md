@@ -27,7 +27,7 @@ python foundation.py
 # for any string or message to encode or decode it 
 ```
 - Result
-<img src="/image.png" height="300" width="300">
+<img src="/image.png" height="500" width="500">
 
 As we can see we inputed the text hello world and it excuted and shows the outcome "aGVsbG8gd29ybGQ=" in base64 and "hello%20world" in URL encoding.
 
