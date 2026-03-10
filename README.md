@@ -36,4 +36,5 @@ As we can also connect to the server and client where we host a connection inbet
 # Author
 - Phurba Sherpa
 # License
-- This project is for study material, you can use it. 
+- This project is under MIT License. [license](https://github.com/Phurbasherpa13/Task-1-Secure-Encoding/blob/main/LICENSE)
+
